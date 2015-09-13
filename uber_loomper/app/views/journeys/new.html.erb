@@ -1,0 +1,19 @@
+<h1>New Trip</h1>
+
+<%= form_for @journey do |f| %>
+
+  <%= f.label :pickup_location %>
+  <%= f.text_area :pickup_location %><br />
+
+  <%= f.label :destination %>
+  <%= f.text_area :destination %><br />
+
+  <%= f.label :pickup_time %>
+  <%= f.datetime_field :pickup_time %><br />
+
+  <%= f.label :num_of_passengers %>
+  <%= f.number_field :num_of_passengers %><br />
+
+  <%= f.submit %>
+
+<% end %>

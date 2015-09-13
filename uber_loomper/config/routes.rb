@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
 
-  resources :users
+  resources :users do 
+    resources :journeys
+  end
   resources :drivers
   resources :vehicles
   resources :journeys
+
+  # get "/users/:id/journeys" => "users#show_user_journeys", as: "user_journeys"
+
+  # get "/users/:id/journeys/new" => "users#new_user_journey", as: "new_user_journey"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
