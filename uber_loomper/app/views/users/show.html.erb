@@ -4,3 +4,8 @@
 <p>Surname: <%= @user.last_name %></p>
 <p>Email: <%= @user.email %></p>
 <p>Phone: <%= @user.phone %></p>
+
+<%= link_to "Edit", edit_user_path %>
+<%= link_to "Delete", @user, method: :delete %>
+
+

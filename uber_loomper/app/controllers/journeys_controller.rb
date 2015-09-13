@@ -12,8 +12,9 @@ class JourneysController < ApplicationController
 
   def create
     @user = User.find(params[:user_id])
-    @journey = Journey.new(journey_params)
-    if journey.save
+    params[:user] = @user
+    @journey = @user.journeys.create(journey_params)
+    if @journey.save
       redirect_to @journey
     else
       redirect_to new_user_journey_path
