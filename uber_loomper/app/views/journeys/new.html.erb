@@ -1,6 +1,6 @@
 <h1>New Trip</h1>
 
-<%= form_for @journey do |f| %>
+<%= form_for @journey, url: user_journeys_path(@user) do |f| %>
 
   <%= f.label :pickup_location %>
   <%= f.text_area :pickup_location %><br />

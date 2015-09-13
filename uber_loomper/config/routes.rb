@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
 
-  resources :users do 
-    resources :journeys
+
+  # concern :journeyman do 
+  #   resources :journeys, shallow: true
+  # end
+
+  resources :users do
+    resources :journeys, shallow: true
   end
   resources :drivers
   resources :vehicles
-  resources :journeys
+  # resources :journeys
 
   # get "/users/:id/journeys" => "users#show_user_journeys", as: "user_journeys"
 

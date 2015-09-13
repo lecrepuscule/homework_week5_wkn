@@ -13,10 +13,10 @@ class UsersController < ApplicationController
     end
   end
 
-  def show_user_journeys
-    @user = User.find(params[:id])
-    @journeys = @user.journeys
-  end
+  # def show_user_journeys
+  #   @user = User.find(params[:id])
+  #   @journeys = @user.journeys
+  # end
 
   def show
   end
