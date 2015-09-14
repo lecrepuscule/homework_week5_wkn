@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   #   resources :journeys, shallow: true
   # end
 
+  root "users#new", as: "root"
+
   resources :users do
     resources :journeys, shallow: true
   end

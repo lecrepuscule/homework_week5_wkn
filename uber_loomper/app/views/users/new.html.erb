@@ -1,19 +1,27 @@
-<h1>New User Registration</h1>
+<h1>Sign Up</h1>
 
 <%= form_for @user do |f| %>
 
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %><br />
+  <%= render "shared/error_messages" %>
 
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name %><br />
+  <%= f.label :first_name, "Name" %>
+  <%= f.text_field :first_name, class: "form-control" %><br />
+
+  <%= f.label :last_name, "Surname" %>
+  <%= f.text_field :last_name, class: "form-control" %><br />
 
   <%= f.label :email %>
-  <%= f.email_field :email %><br />
+  <%= f.email_field :email, class: "form-control" %><br />
 
   <%= f.label :phone %>
-  <%= f.phone_field :phone %><br />
+  <%= f.phone_field :phone, class: "form-control" %><br />
 
-  <%= f.submit %>
+  <%= f.label :password %>
+  <%= f.password_field :password, class: "form-control" %><br />
+
+  <%= f.label :password_confirmation, "Confirmation" %>
+  <%= f.password_field :password_confirmation, class: "form-control" %><br />
+
+  <%= f.submit "Create Account" %>
 
 <% end %>
